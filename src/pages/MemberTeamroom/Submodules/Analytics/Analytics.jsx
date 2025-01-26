@@ -301,14 +301,14 @@ function Analytics() {
           <div className='text-center flex-col w-full'>
 
 
-            {materialScores.map((material) => (
+            {materialScores?.map((material) => (
               <div key={material.description} style={{ width: "50%", margin: "auto", textAlign: "center" }} className="pt-8">
                 <h2 className="mb-8 text-xl font-mono">{material.description}</h2>
                 {material.totalFeedbackCount > 0 && (
                   <BarChart
 
                     xAxis={[{ scaleType: 'band', data: ['Communication', 'Collaboration', 'Accountability'] }]}
-                    series={[{ data: [material.fullCommunicationStars,  material.fullCollaborationStars,material.fullAccountabilityStars], label: 'Scrore' }, { data: [material.totalReliabilityStars, material.totalUnderstandabilityStars, material.totalUsefulnessStars], label: 'Full Score' }]}
+                    series={[{ data: [material.fullCommunicationStars,  material.fullCollaborationStars,material.fullAccountabilityStars], label: 'Scrore' }, { data: [material.totalCommunicationStars, material.totalCollaborationStars, material.totalAccountabilityStars], label: 'Full Score' }]}
                     width={500}
                     height={300}
                   />
@@ -345,14 +345,14 @@ function Analytics() {
         )}
         {chart === 3 && (
           <div className='text-center flex-col w-full'>
-            {taskScores.map((task) => (
+            {taskScores?.map((task) => (
               <div key={task.description}style={{ width: "50%", margin: "auto", textAlign: "center" }} className="pt-8" >
                 <h2 className="mb-8 text-xl font-mono">{task.description}</h2>
                 {task.totalFeedbackCount > 0 && (
                   <BarChart
 
                     xAxis={[{ scaleType: 'band', data: ['Communication', 'Collaboration', 'Accountability'] }]}
-                    series={[{ data: [task.fullCommunicationStars,  task.fullCollaborationStars,task.fullAccountabilityStars], label: 'Scrore' }, { data: [task.totalReliabilityStars, task.totalUnderstandabilityStars, task.totalUsefulnessStars], label: 'Full Score' }]}
+                    series={[{ data: [task.fullCommunicationStars,  task.fullCollaborationStars,task.fullAccountabilityStars], label: 'Scrore' }, { data: [task.totalCommunicationStars, task.totalCollaborationStars, task.totalAccountabilityStars], label: 'Full Score' }]}
                     width={500}
                     height={300}
                   />

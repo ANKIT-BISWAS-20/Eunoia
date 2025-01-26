@@ -164,11 +164,11 @@ function LeaderAnalytics() {
       const teamPositiveFeedbacks = teamFeedbacks.filter(
         (feedback) => feedback.emotion === "POSITIVE"
       );
-      setTeamPositiveFeedback(teamPositiveFeedbacks[0].count);
+      setTeamPositiveFeedback(teamPositiveFeedbacks[0]?.count);
       const teamNegativeFeedbacks = teamFeedbacks.filter(
         (feedback) => feedback.emotion === "NEGATIVE"
       );
-      setTeamNegativeFeedback(teamNegativeFeedbacks[0].count);
+      setTeamNegativeFeedback(teamNegativeFeedbacks[0]?.count);
       setTaskFeedbackEmotions(response.data.data.taskFeedbacksEmotions);
       setMaterialFeedbackEmotions(response.data.data.materialFeedbacksEmotions);
       setTaskScores(response.data.data.taskStarsCount);

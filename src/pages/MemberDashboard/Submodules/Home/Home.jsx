@@ -33,7 +33,7 @@ function Home
             title={team.title}
             category={team.category}
             description={team.description}
-            teacherName={team.leaderName}
+            leaderName={team.leaderName}
             imageUrl={team.imageUrl}
             link={team.link}
             isLeader={false}

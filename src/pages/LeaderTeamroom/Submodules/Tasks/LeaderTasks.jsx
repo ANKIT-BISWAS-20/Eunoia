@@ -125,7 +125,6 @@ function LeaderTasks() {
         }
       });
 
-      console.log("Tasks response:", response.data);
 
       if (response.data && response.data.success) {
         const materials = response.data.data;
